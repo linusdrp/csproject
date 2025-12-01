@@ -84,8 +84,8 @@ safety_buffer_km = st.sidebar.slider("Minimum remaining range when arriving at c
 
 SUBMIT = st.sidebar.button("Calculate Route")
 st.title("⚡🚘 EV Route Planner")
-st.info("Find optimal charging stops along your route. Click the calculate button to begin.") 
 if not SUBMIT:
+    st.info("Find optimal charging stops along your route. Click the calculate button to begin.") 
     st.stop()
 
 # -------------------------------------------------------------
