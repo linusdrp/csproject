@@ -14,12 +14,22 @@ MAPBOX_KEY = "pk.eyJ1IjoibGludXNkcnAiLCJhIjoiY21pN2RsajY4MDZ4ZTJqczc4cjhwYnlpMSJ
 OCM_KEY = "46ec45da-3737-49e3-86bf-a677f9fe2006"
 
 st.set_page_config(layout="wide", page_title="EV Route Planner")
-
 # -------------------------------------------------------------
 # LOAD ML MODEL
 # -------------------------------------------------------------
+
+import os
+import pickle
+from train_model import train_and_save_model
+
+# falls Modell fehlt → neu trainieren
+if not os.path.exists("waiting_time_model.pkl"):
+    train_and_save_model()
+
+# Modell laden
 with open("waiting_time_model.pkl", "rb") as f:
     wait_model = pickle.load(f)
+
 
 # -------------------------------------------------------------
 # UPDATED FEATURE EXTRACTION — NOW USING REAL OCM DATA
