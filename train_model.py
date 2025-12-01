@@ -68,3 +68,11 @@ with open("waiting_time_model.pkl", "wb") as f:
     pickle.dump(model, f)
 
 print("\nModel saved as waiting_time_model.pkl")
+
+def train_and_save_model():
+    with open("waiting_time_model.pkl", "wb") as f:
+        pickle.dump(model, f)
+
+if __name__ == "__main__":
+    train_and_save_model()
+
