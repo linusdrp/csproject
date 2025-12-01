@@ -359,8 +359,6 @@ with st.spinner("Calculating route..."):
             # Can reach destination from cur_start
             if leg == 0 and not top_chargers:
                 st.success("No charging stop required.")
-            else:
-                st.success("Destination will be reachable after the planned stops.")
             break
 
         # Need a charger on this leg
