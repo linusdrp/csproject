@@ -13,7 +13,7 @@ from datetime import datetime, timedelta
 MAPBOX_KEY = "pk.eyJ1IjoibGludXNkcnAiLCJhIjoiY21pN2RsajY4MDZ4ZTJqczc4cjhwYnlpMSJ9.OiKAnhY6AqXuKQt55_oLhA"
 OCM_KEY = "46ec45da-3737-49e3-86bf-a677f9fe2006"
 
-st.set_page_config(layout="wide", page_title="EV Route Planner")
+st.set_page_config(layout="wide", page_title="OptiRoute EV")
 # -------------------------------------------------------------
 # LOAD ML MODEL
 # -------------------------------------------------------------
@@ -83,7 +83,7 @@ battery_soc = st.sidebar.slider("Current State of Charge (%)", 0, 100, 80)
 safety_buffer_km = st.sidebar.slider("Minimum remaining range when arriving at charger (km)", 5, 80, 30)
 
 SUBMIT = st.sidebar.button("Calculate Route")
-st.title("⚡🚘 EV Route Planner")
+st.title("⚡🚘 OptiRoute EV")
 if not SUBMIT:
     st.info("Find optimal charging stops along your route. Click the calculate button to begin.") 
     st.stop()
