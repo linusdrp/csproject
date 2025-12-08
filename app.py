@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 # CONFIG
 # -------------------------------------------------------------
 MAPBOX_KEY = "pk.eyJ1IjoibGludXNkcnAiLCJhIjoiY21pN2RsajY4MDZ4ZTJqczc4cjhwYnlpMSJ9.OiKAnhY6AqXuKQt55_oLhA"
-OCM_KEY = "46ec45da-3737-49e3-86bf-a677f9fe2006"
+OCM_KEY = "9e0d579a-4743-4cd4-978a-667561ed4771"
 
 st.set_page_config(layout="wide", page_title="OptiRoute EV")
 # -------------------------------------------------------------
